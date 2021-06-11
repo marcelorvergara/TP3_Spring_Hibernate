@@ -5,16 +5,17 @@
  */
 package br.edu.infnet.service;
 
-import br.edu.infnet.model.User;
+import br.edu.infnet.model.Role;
+import java.util.List;
 
 /**
  *
- * @author marcelo
+ * @author Marcelo Vergara <http://marcelo-vergara.codes/>
  */
-public interface UserService {
+public interface RoleService {
 
-    void save(User user);
+    List<Role> findAll();
 
-    User findByUsername(String username);
+    Role findRoleById(Long id);
 
 }

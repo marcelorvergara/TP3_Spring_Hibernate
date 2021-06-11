@@ -19,6 +19,7 @@ and open the template in the editor.
           </form>
 
         <h2>Bem-vindo <span sec:authentication="name"></span></h2> 
+        <h5>Perfil <span sec:authentication="principal.authorities"></span></h5> 
         <div class="text-right">
            <button class="btn btn-primary btn-sm btn-block" onclick="document.forms['logoutForm'].submit()">Sair</button> 
         </div>

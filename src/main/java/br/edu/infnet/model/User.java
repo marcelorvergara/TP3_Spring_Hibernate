@@ -5,15 +5,11 @@
  */
 package br.edu.infnet.model;
 
-import java.util.Set;
-import javax.persistence.CascadeType;
+import java.util.List;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
@@ -36,7 +32,17 @@ public class User {
     private String passwordConfirm;
 
     @ManyToMany
-    private Set<Role> roles;
+    private List<Role> roles;
+
+    public User() {
+
+    }
+
+    public User(String username, String password, List<Role> perfis) {
+        this.username = username;
+        this.password = password;
+        this.roles = perfis;
+    }
 
     /**
      * @return the id
@@ -97,14 +103,14 @@ public class User {
     /**
      * @return the roles
      */
-    public Set<Role> getRoles() {
+    public List<Role> getRoles() {
         return roles;
     }
 
     /**
      * @param roles the roles to set
      */
-    public void setRoles(Set<Role> roles) {
+    public void setRoles(List<Role> roles) {
         this.roles = roles;
     }
 

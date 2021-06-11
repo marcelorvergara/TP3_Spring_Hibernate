@@ -5,6 +5,9 @@
  */
 package br.edu.infnet.service;
 
+import br.edu.infnet.model.Role;
+import java.util.List;
+import java.util.Set;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
